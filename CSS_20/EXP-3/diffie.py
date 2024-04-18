@@ -1,0 +1,11 @@
+from random import randint
+P=int(input("The Value of P is :"))
+G=int(input("The Value of G is :"))
+a = int(input("The Private Key a for Alice is :"))
+x = int(pow(G,a,P))
+b = int(input("The Private Key b for Bob is :"))
+y = int(pow(G,b,P))
+ka = int(pow(y,a,P))
+kb = int(pow(x,b,P))
+print('Secret key for the Alice is : %d'%(ka))
+print('Secret Key for the Bob is : %d'%(kb))
